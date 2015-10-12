@@ -104,7 +104,7 @@
     {{#each blog}}
     <div class="blog-post">
         <h2 class="blog-post-title"><a href="#">{{{Title}}}</a></h2>
-        <p class="blog-post-meta">At time by an author</p>
+        <p class="blog-post-meta">At {{formatDate createdAt "short"}} by {{{Author}}}</p>
         <div>{{{Content}}}</div>
     </div>
     {{/each}}
@@ -128,7 +128,9 @@
     <script src="js/blog.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <!-- Time format handling-->
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.js"></script>
 
 
 	<div id="feedly-mini" title="feedly Mini tookit"></div>
